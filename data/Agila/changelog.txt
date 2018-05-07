@@ -1,0 +1,93 @@
+2006-03-27T17:45:53.000-05:00|AGILA-44|Attachment|null|jspIncludeForm.patch
+2006-03-27T19:09:05.000-05:00|AGILA-44|assignee|null|Chris Lim
+2006-04-02T22:42:15.000-04:00|AGILA-44|description|The existing HTTPRenderer used in the sample webapp only supports returning the html of the form as a String.  This leads to an ugly StringBuffer exercise in the sample LeaveApplication process as noted in the code.  This patch provides an alternate renderer and adjusts the existing rendering mechanism to account for the new option.  There is certainly a cleaner way to do this - most probably through a true callback method, but for now this seems to work.|The existing HTTPRenderer used in the sample webapp only supports returning the html of the form as a String.  This leads to an ugly StringBuffer exercise in the sample LeaveApplication process as noted in the code.    The first patch provides an alternate renderer and adjusts the existing rendering mechanism to account for the new option.    The second patch takes a different approach and can replace the first.  It uses RequestDispatcher.include in the task's render method to accomplish the same goal, and also allows fall back behavior for tasks that wish to generate the form html as a string using some other method.  It uses less overall code, but does rely on servlet spec 2.4 (agila bpm seems to already depend on 2.4 anyway).  
+2006-04-02T22:43:17.000-04:00|AGILA-44|Attachment|null|jspRenderingForm-2.patch
+2006-03-25T06:34:03.000-05:00|AGILA-43|Attachment|null|userIdentity.patch
+2006-03-25T06:35:43.000-05:00|AGILA-43|summary|[PATCH] Fix mulit-user support|[PATCH] Fix multi-user support
+2006-03-25T19:18:46.000-05:00|AGILA-43|status|Open|Resolved
+2006-03-25T19:18:46.000-05:00|AGILA-43|resolution|null|Fixed
+2006-03-27T17:08:18.000-05:00|AGILA-43|status|Resolved|Closed
+2006-03-01T18:18:34.000-05:00|AGILA-40|Attachment|null|agila_enhanced_monitoring.patch
+2006-03-01T18:25:29.000-05:00|AGILA-40|Attachment|null|monitoring_processlist.jpg
+2006-03-01T18:26:29.000-05:00|AGILA-40|Attachment|null|monitoring_errorlist.jpg
+2006-03-11T15:44:47.000-05:00|AGILA-40|assignee|null|Matthieu Riou
+2006-03-11T15:44:47.000-05:00|AGILA-40|resolution|null|Fixed
+2006-03-11T15:44:47.000-05:00|AGILA-40|Fix Version|null|0.1
+2006-03-11T15:44:47.000-05:00|AGILA-40|status|Open|Resolved
+2006-03-11T15:45:14.000-05:00|AGILA-40|status|Resolved|Closed
+2006-01-04T14:48:21.000-05:00|AGILA-38|Attachment|null|diffs.zip
+2006-01-04T14:48:21.000-05:00|AGILA-38|Attachment|null|addressing-1.0.jar
+2006-01-04T14:48:21.000-05:00|AGILA-38|Attachment|null|newFiles.zip
+2005-11-27T20:25:33.000-05:00|AGILA-36|assignee|null|Chris Lim
+2005-11-27T20:23:10.000-05:00|AGILA-34|assignee|null|Chris Lim
+2005-11-27T20:21:31.000-05:00|AGILA-33|assignee|null|Chris Lim
+2005-11-27T20:20:22.000-05:00|AGILA-32|assignee|null|Chris Lim
+2005-11-27T20:19:06.000-05:00|AGILA-31|assignee|null|Chris Lim
+2005-11-27T20:15:52.000-05:00|AGILA-29|assignee|null|Chris Lim
+2005-11-27T20:28:01.000-05:00|AGILA-27|assignee|null|Chris Lim
+2005-11-22T08:33:21.000-05:00|AGILA-26|Attachment|null|approval-stop.patch
+2005-11-22T08:34:24.000-05:00|AGILA-26|description|Stop node is failing, and leaving processes in active running state instead of allowing them to complete.|Leave Approval handler is failing, and leaving processes in active running state instead of allowing them to complete.
+2005-11-22T08:34:24.000-05:00|AGILA-26|summary|Stop node does not allow process to complete|Sample Leave approval handler does not allow process to complete
+2005-11-23T08:12:12.000-05:00|AGILA-26|assignee|null|Chris Lim
+2005-11-26T05:05:06.000-05:00|AGILA-26|resolution|null|Fixed
+2005-11-26T05:05:06.000-05:00|AGILA-26|status|Open|Resolved
+2005-11-26T19:59:12.000-05:00|AGILA-26|status|Resolved|Closed
+2005-11-22T08:29:55.000-05:00|AGILA-25|description|An incorrect URI in adminmenu.jsp is causing:  |POM missing JSTL dependencies, and an incorrect taglib URI in adminmenu.jsp is causing:  2005-11-21 21:47:49 ApplicationDispatcher[/apache-agila] Servlet.service() for servlet jsp threw exception org.apache.jasper.JasperException: The absolute uri: http://java.sun.com/jsp/jstl/core cannot be resolved in either web.xml or the jar files deployed with this application 	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:50) 	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:411) 	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:118)  Attached patch addresses both. (note the patch for pom.xml also contains changes for AGILA-24)
+2005-11-22T08:30:41.000-05:00|AGILA-25|Attachment|null|jstl-dep.patch
+2005-11-23T08:11:33.000-05:00|AGILA-25|assignee|null|Chris Lim
+2005-11-26T05:19:06.000-05:00|AGILA-25|resolution|null|Fixed
+2005-11-26T05:19:06.000-05:00|AGILA-25|status|Open|Resolved
+2005-11-26T20:00:00.000-05:00|AGILA-25|status|Resolved|Closed
+2005-11-22T01:54:53.000-05:00|AGILA-24|Attachment|null|pom.patch
+2005-11-23T08:10:49.000-05:00|AGILA-24|assignee|null|Chris Lim
+2005-11-26T05:24:10.000-05:00|AGILA-24|status|Open|Resolved
+2005-11-26T05:24:10.000-05:00|AGILA-24|resolution|null|Fixed
+2005-11-26T20:05:40.000-05:00|AGILA-24|status|Resolved|Closed
+2005-11-22T01:07:00.000-05:00|AGILA-23|Attachment|null|actor.patch
+2005-11-22T06:20:23.000-05:00|AGILA-23|Attachment|null|actor.patch
+2005-11-22T07:31:28.000-05:00|AGILA-23|assignee|null|Chris Lim
+2005-11-22T08:38:44.000-05:00|AGILA-23|Attachment|null|ActorResolverService.java
+2005-11-22T08:39:22.000-05:00|AGILA-23|Attachment|null|ActorResolverServiceImpl.java
+2005-11-27T16:12:45.000-05:00|AGILA-23|resolution|null|Fixed
+2005-11-27T16:12:45.000-05:00|AGILA-23|status|Open|Resolved
+2006-03-27T17:07:35.000-05:00|AGILA-23|status|Resolved|Closed
+2005-11-23T10:09:44.000-05:00|AGILA-22|assignee|null|Chris Lim
+2005-11-27T16:15:53.000-05:00|AGILA-22|status|Open|Resolved
+2005-11-27T16:15:53.000-05:00|AGILA-22|resolution|null|Fixed
+2005-11-27T20:28:59.000-05:00|AGILA-21|assignee|null|Chris Lim
+2009-05-05T21:25:39.244-04:00|AGILA-21|Link|null|This issue is blocked by DERBY-3836
+2005-10-31T15:04:48.000-05:00|AGILA-20|status|Open|Closed
+2005-10-31T15:04:48.000-05:00|AGILA-20|resolution|null|Invalid
+2005-10-31T15:05:49.000-05:00|AGILA-19|status|Open|Closed
+2005-10-31T15:05:49.000-05:00|AGILA-19|resolution|null|Invalid
+2006-03-28T19:34:29.000-05:00|AGILA-17|Attachment|null|bpm-split.zip
+2005-07-14T16:41:59.000-04:00|AGILA-16|resolution|null|Fixed
+2005-07-14T16:41:59.000-04:00|AGILA-16|status|Open|Closed
+2005-07-19T09:35:05.000-04:00|AGILA-16|resolution|Fixed|null
+2005-07-19T09:35:05.000-04:00|AGILA-16|status|Closed|Reopened
+2005-05-28T01:27:09.000-04:00|AGILA-14|assignee|null|Matthieu Riou
+2005-05-28T01:27:15.000-04:00|AGILA-14|status|Open|In Progress
+2005-05-28T15:43:16.000-04:00|AGILA-14|resolution|null|Fixed
+2005-05-28T15:43:16.000-04:00|AGILA-14|status|In Progress|Resolved
+2005-05-14T14:05:39.000-04:00|AGILA-13|Attachment|null|maven-eclipse-plugin-mpenabled-1.9.patch
+2005-05-14T14:05:39.000-04:00|AGILA-13|Attachment|null|maven-eclipse-plugin-1.9-1.steveng.jar
+2005-05-14T14:06:52.000-04:00|AGILA-13|status|Open|Closed
+2005-05-14T14:06:52.000-04:00|AGILA-13|resolution|null|Fixed
+2005-05-14T23:02:09.000-04:00|AGILA-12|resolution|null|Fixed
+2005-05-14T23:02:09.000-04:00|AGILA-12|status|Open|Resolved
+2005-05-14T23:02:21.000-04:00|AGILA-12|status|Resolved|Closed
+2005-05-12T20:51:27.000-04:00|AGILA-10|Version|null|0.1
+2005-05-12T20:51:27.000-04:00|AGILA-10|Component|null|BPEL Deployer
+2005-05-12T20:48:50.000-04:00|AGILA-9|summary|Provide connectors to EJB and JMS|Provide invokers for EJBs and JMS
+2005-05-12T20:44:31.000-04:00|AGILA-8|Fix Version|0.1|null
+2005-05-12T20:39:22.000-04:00|AGILA-7|description|Implement Scope as defined in WS-BPEL specs.|Implement Scope as defined in WS-BPEL specs, including error and compensation handlers, fault handlers and event handlers.
+2005-05-12T20:43:48.000-04:00|AGILA-7|Fix Version|0.1|null
+2005-05-12T20:33:52.000-04:00|AGILA-6|description|Implement links as defined in WS-BPEL specs for the Scope activity.|Implement links as defined in WS-BPEL specs for the Flow activity.
+2005-05-12T20:33:52.000-04:00|AGILA-6|summary|Implement scope links|Implement flow links
+2005-05-12T20:41:53.000-04:00|AGILA-6|Fix Version|0.1|null
+2005-05-12T20:40:47.000-04:00|AGILA-5|Fix Version|0.1|null
+2005-05-12T20:41:15.000-04:00|AGILA-4|Fix Version|0.1|null
+2005-11-27T21:15:13.000-05:00|AGILA-2|resolution|null|Won't Fix
+2005-11-27T21:15:13.000-05:00|AGILA-2|status|Open|Closed
+2005-05-02T18:49:07.000-04:00|AGILA-1|status|Open|Closed
+2005-05-02T18:49:07.000-04:00|AGILA-1|resolution|null|Fixed
